@@ -275,3 +275,4 @@ Successfully implemented an automated CI/CD pipeline with:
 
 
 Pipeline Status: SUCCESS
+Webhook screenshot test
