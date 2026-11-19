@@ -48,7 +48,11 @@ pipeline {
                 sh '''
                 docker stop myapp || true
                 docker rm myapp || true
-                docker run -d -p 5000:5000 --name myapp $DOCKER_IMAGE:latest
+                docker run -d \
+                --restart always \
+                -p 5000:5000 \
+                --name myapp \
+                apoorvaantappa/devops-app:latest
                 '''
             }
         }
